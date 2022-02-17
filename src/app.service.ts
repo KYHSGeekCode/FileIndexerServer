@@ -9,10 +9,6 @@ export class AppService {
     private recordCollection: CollectionReference<RecordDocument>,
   ) {}
 
-  getHello(): string {
-    return 'Hello World!';
-  }
-
   async create({ filename, tag, major_drive, minor_drive, path }) {
     const docRef = this.recordCollection.doc(filename);
     await docRef.set({

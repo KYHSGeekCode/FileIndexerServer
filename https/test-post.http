@@ -1,1 +1,10 @@
 POST 127.0.0.1:3000/
+content-type: application/json
+
+{
+  "filename":"Helaoaox",
+  "tag": "",
+  "major_drive": "ahxodzzqq1",
+  "minor_drive": "D",
+  "path": "/healox/soxkf.skdx.jpg"
+}
