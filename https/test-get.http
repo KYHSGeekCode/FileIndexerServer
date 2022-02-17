@@ -1,2 +1,2 @@
 GET 127.0.0.1:3000/record/
-Authorization: Bearer 
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImpvaG4iLCJzdWIiOjEsImlhdCI6MTY0NTA2MTU0MSwiZXhwIjoxNjQ1MDYxNjAxfQ.dRVvDTIAhiZUiQZJIt6meLicY5FRIL3xiqm5xySMsCo
