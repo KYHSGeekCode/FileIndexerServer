@@ -3,6 +3,7 @@ import {
   Controller,
   Get,
   Post,
+  Query,
   Request,
   UseGuards,
 } from '@nestjs/common';
@@ -21,12 +22,15 @@ export class AppController {
 
   @UseGuards(JwtAuthGuard)
   @Get('record')
-  getRecords() {
-    return this.appService.findAll();
+  getRecordsByName(
+    @Query('query') query: string,
+    @Query('cursor') cursor: string,
+  ) {
+    return this.appService.findByNameContaining(query, cursor);
   }
 
   @UseGuards(JwtAuthGuard)
-  @Post()
+  @Post('record')
   postRecord(@Body() body: RecordDocument) {
     return this.appService.create(body);
   }

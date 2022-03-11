@@ -6,4 +6,5 @@ export class RecordDocument {
   major_drive: string;
   minor_drive: string;
   path: string;
+  nlp_parsed: string[];
 }

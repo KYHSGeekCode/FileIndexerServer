@@ -1,10 +1,11 @@
-POST 127.0.0.1:3000/
+POST 127.0.0.1:8080/record/
 content-type: application/json
+Authorization: Bearer
 
 {
-  "filename":"Helaoaox",
+  "filename":"SignInWithPasswordResponse.kt",
   "tag": "",
-  "major_drive": "ahxodzzqq1",
+  "major_drive": "ahxodzzqq2",
   "minor_drive": "D",
-  "path": "/healox/soxkf.skdx.jpg"
+  "path": "/healox/SignInWithPasswordResponse.kt"
 }
