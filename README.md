@@ -71,3 +71,13 @@ Nest is an MIT-licensed open source project. It can grow thanks to the sponsors 
 ## License
 
 Nest is [MIT licensed](LICENSE).
+
+
+# Deploy
+```shell
+gcloud auth login
+gcloud config set project fileindex
+gcloud builds submit --tag gcr.io/fileindex/fileindex
+gcloud run deploy fileindexer --image gcr.io/fileindex/fileindex --platform manage 
+```
+ 
