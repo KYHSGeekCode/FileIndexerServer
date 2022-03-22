@@ -2,6 +2,7 @@ import {
   Body,
   Controller,
   Get,
+  Logger,
   Post,
   Query,
   Request,
@@ -33,6 +34,13 @@ export class AppController {
   @Post('record')
   postRecord(@Body() body: RecordDocument) {
     return this.appService.create(body);
+  }
+
+  @UseGuards(JwtAuthGuard)
+  @Post('records')
+  postRecords(@Body() body: RecordDocument[]) {
+    Logger.log(body);
+    return this.appService.bulk_create(body);
   }
 
   @UseGuards(LocalAuthGuard)

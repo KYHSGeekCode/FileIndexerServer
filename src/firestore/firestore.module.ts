@@ -4,6 +4,7 @@ import {
   FirestoreDatabaseProvider,
   FirestoreOptionsProvider,
   FirestoreCollectionProviders,
+  FirestoreBulkWriterProvider,
 } from './firestore.providers';
 
 type FirestoreModuleOptions = {
@@ -32,12 +33,22 @@ export class FirestoreModule {
         inject: [FirestoreDatabaseProvider],
       }),
     );
+    const bulkWriterProviders = {
+      provide: FirestoreBulkWriterProvider,
+      useFactory: (db) => db.bulkWriter(),
+      inject: [FirestoreDatabaseProvider],
+    };
     return {
       global: true,
       module: FirestoreModule,
       imports: options.imports,
-      providers: [optionsProvider, dbProvider, ...collectionProviders],
-      exports: [dbProvider, ...collectionProviders],
+      providers: [
+        optionsProvider,
+        dbProvider,
+        bulkWriterProviders,
+        ...collectionProviders,
+      ],
+      exports: [dbProvider, bulkWriterProviders, ...collectionProviders],
     };
   }
 }

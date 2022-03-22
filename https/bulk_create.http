@@ -1,0 +1,20 @@
+POST 127.0.0.1:8080/records/
+content-type: application/json
+Authorization: Bearer
+
+[
+  {
+    "filename": "SignInWithPasswordResponse.kt",
+    "tag": "",
+    "major_drive": "ahxodzzqq2",
+    "minor_drive": "D",
+    "path": "/healox/SignInWithPasswordResponse.kt"
+  },
+  {
+    "filename": "SignInWithPasswordResponse234.kt",
+    "tag": "",
+    "major_drive": "saxizc4r5",
+    "minor_drive": "E",
+    "path": "/healox/SignInWithPasswordResponse234.kt"
+  }
+]
